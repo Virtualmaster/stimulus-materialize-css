@@ -1,0 +1,25 @@
+{
+  "name": "@virtualmaster/stimulus-materialize-css",
+  "version": "1.0.0",
+  "description": "Stimulus controllers for all materialize components",
+  "main": "dist/stimulus-materialize-css.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "stimulus",
+    "materilazize-css"
+  ],
+  "dependencies": {
+    "materialize-css": "1.0.0",
+    "stimulus": "~2.0"
+  },
+  "author": "Lukas Bauer <lukas.bauer@virtualmaster.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "5.38.1",
+    "webpack-cli": "4.7.0"
+  }
+}

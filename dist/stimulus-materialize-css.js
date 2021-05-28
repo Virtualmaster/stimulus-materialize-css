@@ -1,0 +1,1 @@
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports={}:"function"==typeof define&&define.amd?define("stimulusMaterialize",[],t):"object"==typeof exports?exports.stimulusMaterialize={}:e.stimulusMaterialize={}}(self,(function(){return{}}));
