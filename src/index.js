@@ -16,6 +16,7 @@ import DatepickerController from './controllers/datepicker_controller';
 import TimepickerController from './controllers/timepicker_controller';
 import DateTimePickerController from './controllers/date_time_picker_controller';
 import FormSelectController from './controllers/form_select_controller';
+import FormController from './controllers/form_controller';
 
 export function registerAll(application) {
     application.register('materialize--carousel', CarouselController);
@@ -36,4 +37,5 @@ export function registerAll(application) {
     application.register('materialize--timepicker', TimepickerController);
     application.register('materialize--date-time-picker', DateTimePickerController);
     application.register('materialize--form-select', FormSelectController);
+    application.register('materialize--form', FormController);
 }
