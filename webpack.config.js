@@ -19,5 +19,6 @@ module.exports = {
             amd: 'stimulus',
             root: 'stimulus'
         }
-    }
+    },
+    mode: 'production'
 }
