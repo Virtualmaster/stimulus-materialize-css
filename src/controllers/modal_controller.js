@@ -13,13 +13,13 @@ export default class extends Controller {
     }
 
     connect() {
-        const opacity = this.hasOpacityValue ? this.opacityValue : undefined;
-        const inDuration = this.hasInDurationValue ? this.inDurationValue : undefined;
-        const outDuration = this.hasOutDurationValue ? this.outDurationValue : undefined;
-        const preventScrolling = this.hasPreventScrollingValue ? this.preventScrollingValue : undefined;
-        const dismissible = this.hasDismissibleValue ? this.dismissibleValue : undefined;
-        const startingTop = this.hasStartingTopValue ? this.startingTopValue : undefined;
-        const endingTop = this.hasEndingTopValue ? this.endingTopValue : undefined;
+        const opacity = this.hasOpacityValue ? this.opacityValue : 0.5;
+        const inDuration = this.hasInDurationValue ? this.inDurationValue : 250;
+        const outDuration = this.hasOutDurationValue ? this.outDurationValue : 250;
+        const preventScrolling = this.hasPreventScrollingValue ? this.preventScrollingValue : true;
+        const dismissible = this.hasDismissibleValue ? this.dismissibleValue : true;
+        const startingTop = this.hasStartingTopValue ? this.startingTopValue : '4%';
+        const endingTop = this.hasEndingTopValue ? this.endingTopValue : '10%';
 
         const modalOptions = {
             opacity: opacity,

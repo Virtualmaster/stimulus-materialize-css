@@ -1,5 +1,4 @@
 .idea/
-node_modules/
 .eslintrc.json
 webpack.config.js
 test/

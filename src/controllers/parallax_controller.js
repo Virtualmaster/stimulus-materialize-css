@@ -7,7 +7,7 @@ export default class extends Controller {
     }
 
     connect() {
-        const responsiveThreshold = this.hasResponsiveThresholdValue ? this.responsiveThresholdValue : undefined;
+        const responsiveThreshold = this.hasResponsiveThresholdValue ? this.responsiveThresholdValue : 0;
 
         const parallaxOptions = {
             responsiveThreshold: responsiveThreshold

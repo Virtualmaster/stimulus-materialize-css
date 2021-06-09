@@ -9,9 +9,9 @@ export default class extends Controller{
     }
 
     connect() {
-        const data = this.hasDataValue ? this.dataValue : undefined;
-        const limit = this.hasLimitValue ? this.limitValue : undefined;
-        const minLength = this.hasMinLengthValue ? this.minLengthValue : undefined;
+        const data = this.hasDataValue ? this.dataValue : {};
+        const limit = this.hasLimitValue ? this.limitValue : Infinity;
+        const minLength = this.hasMinLengthValue ? this.minLengthValue : 1;
 
         const tabsOptions = {
             data: data,

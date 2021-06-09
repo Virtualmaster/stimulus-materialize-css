@@ -14,14 +14,14 @@ export default class extends Controller {
     }
 
     connect(){
-        const alignment = this.hasAlignmentValue ? this.alignmentValue : undefined;
-        const autoTrigger = this.hasAutoTriggerValue ? this.autoTriggerValue : undefined;
+        const alignment = this.hasAlignmentValue ? this.alignmentValue : 'left';
+        const autoTrigger = this.hasAutoTriggerValue ? this.autoTriggerValue : true;
         const constrainWidth = this.hasConstrainWidthValue ? this.constrainWidthValue : false;
         const coverTrigger = this.hasCoverTriggerValue ? this.coverTriggerValue : false;
-        const closeOnClick = this.hasCloseOnClickValue ? this.closeOnClickValue : undefined;
-        const hover = this.hasHoverValue ? this.hoverValue : undefined;
-        const inDuration = this.hasInDurationValue ? this.inDurationValue : undefined;
-        const outDuration = this.hasOutDurationValue ? this.outDurationValue : undefined;
+        const closeOnClick = this.hasCloseOnClickValue ? this.closeOnClickValue : true;
+        const hover = this.hasHoverValue ? this.hoverValue : false;
+        const inDuration = this.hasInDurationValue ? this.inDurationValue : 150;
+        const outDuration = this.hasOutDurationValue ? this.outDurationValue : 250;
 
         const dropdownOptions = {
             alignment: alignment,

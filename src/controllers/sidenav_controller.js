@@ -11,11 +11,11 @@ export default class extends Controller {
     }
 
     connect() {
-        const edge = this.hasEdgeValue ? this.edgeValue : undefined;
-        const draggable = this.hasDraggableValue ? this.draggableValue : undefined;
-        const inDuration = this.hasInDurationValue ? this.inDurationValue : undefined;
-        const outDuration = this.hasOutDurationValue ? this.outDurationValue : undefined;
-        const preventScrolling = this.hasPreventScrollingValue ? this.preventScrollingValue : undefined;
+        const edge = this.hasEdgeValue ? this.edgeValue : 'left';
+        const draggable = this.hasDraggableValue ? this.draggableValue : true;
+        const inDuration = this.hasInDurationValue ? this.inDurationValue : 250;
+        const outDuration = this.hasOutDurationValue ? this.outDurationValue : 200;
+        const preventScrolling = this.hasPreventScrollingValue ? this.preventScrollingValue : true;
 
         const sidenavOptions = {
             edge: edge,

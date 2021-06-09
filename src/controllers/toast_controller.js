@@ -13,12 +13,12 @@ export default class extends Controller {
     }
 
     connect() {
-        const html = this.hasHtmlValue ? this.htmlValue : undefined;
-        const displayLength = this.hasDisplayLengthValue ? this.displayLengthValue : undefined;
-        const inDuration = this.hasInDurationValue ? this.inDurationValue : undefined;
-        const outDuration = this.hasOutDurationValue ? this.outDurationValue : undefined;
-        const classes = this.hasClassesValue ? this.classesValue : undefined;
-        const activationPercent = this.hasActivationPercentValue ? this.activationPercentValue : undefined;
+        const html = this.hasHtmlValue ? this.htmlValue : '';
+        const displayLength = this.hasDisplayLengthValue ? this.displayLengthValue : 4000;
+        const inDuration = this.hasInDurationValue ? this.inDurationValue : 300;
+        const outDuration = this.hasOutDurationValue ? this.outDurationValue : 375;
+        const classes = this.hasClassesValue ? this.classesValue : '';
+        const activationPercent = this.hasActivationPercentValue ? this.activationPercentValue : 0.8;
 
         this.toastOptions = {
             html: html,
@@ -30,12 +30,12 @@ export default class extends Controller {
         }
 
         if(this.autoOpenValue){
-            M.Toast(this.toastOptions)
+            M.toast(this.toastOptions)
         }
     }
 
     show(){
-        M.Toast(this.toastOptions)
+        M.toast(this.toastOptions)
     }
 
 }

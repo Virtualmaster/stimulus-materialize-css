@@ -9,9 +9,9 @@ export default class extends Controller {
     }
 
     connect() {
-        const throttle = this.hasThrottleValue ? this.throttleValue : undefined;
-        const scrollOffset = this.hasScrollOffsetValue ? this.scrollOffsetValue : undefined;
-        const activeClass = this.hasActiveClassValue ? this.activeClassValue : undefined;
+        const throttle = this.hasThrottleValue ? this.throttleValue : 100;
+        const scrollOffset = this.hasScrollOffsetValue ? this.scrollOffsetValue : 200;
+        const activeClass = this.hasActiveClassValue ? this.activeClassValue : 'active';
 
         const scrollspyOptions = {
             throttle: throttle,

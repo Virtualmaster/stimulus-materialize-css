@@ -20,20 +20,20 @@ export default class extends Controller {
     }
 
     connect() {
-        const autoClose = this.hasAutoCloseValue ? this.autoCloseValue : undefined;
-        const format = this.hasFormatValue ? this.formatValue : undefined;
-        const defaultDate = this.hasDefaultDateValue ? Date.parse(this.defaultDateValue) : undefined;
-        const setDefaultDate = this.hasSetDefaultDateValue ? this.setDefaultDateValue : undefined;
-        const disableWeekends = this.hasDisableWeekendsValue ? this.disableWeekendsValue : undefined;
-        const firstDay = this.hasFirstDayValue ? this.firstDayValue : undefined;
-        const minDate = this.hasMinDateValue ? Date.parse(this.minDateValue) : undefined;
-        const maxDate = this.hasMaxDateValue ? Date.parse(this.maxDateValue) : undefined;
-        const yearRange = this.hasYearRangeValue ? this.yearRangeValue : undefined;
-        const isRTL = this.hasIsRTLValue ? this.isRTLValue : undefined;
-        const showMonthAfterYear = this.hasShowMonthAfterYearValue ? this.showMonthAfterYearValue : undefined;
-        const showDaysInNextAndPreviousMonths = this.hasShowDaysInNextAndPreviousMonthsValue ? this.showDaysInNextAndPreviousMonthsValue : undefined;
-        const showClearBtn = this.hasShowClearBtnValue ? this.showClearBtnValue : undefined;
-        const events = this.hasEventsValue ? this.eventsValue : undefined;
+        const autoClose = this.hasAutoCloseValue ? this.autoCloseValue : false;
+        const format = this.hasFormatValue ? this.formatValue : 'mmm dd, yyyy';
+        const defaultDate = this.hasDefaultDateValue ? Date.parse(this.defaultDateValue) : null;
+        const setDefaultDate = this.hasSetDefaultDateValue ? this.setDefaultDateValue : false;
+        const disableWeekends = this.hasDisableWeekendsValue ? this.disableWeekendsValue : false;
+        const firstDay = this.hasFirstDayValue ? this.firstDayValue : 0;
+        const minDate = this.hasMinDateValue ? Date.parse(this.minDateValue) : null;
+        const maxDate = this.hasMaxDateValue ? Date.parse(this.maxDateValue) : null;
+        const yearRange = this.hasYearRangeValue ? this.yearRangeValue : 10;
+        const isRTL = this.hasIsRTLValue ? this.isRTLValue : false;
+        const showMonthAfterYear = this.hasShowMonthAfterYearValue ? this.showMonthAfterYearValue : false;
+        const showDaysInNextAndPreviousMonths = this.hasShowDaysInNextAndPreviousMonthsValue ? this.showDaysInNextAndPreviousMonthsValue : false;
+        const showClearBtn = this.hasShowClearBtnValue ? this.showClearBtnValue : false;
+        const events = this.hasEventsValue ? this.eventsValue : [];
 
         let dateValue = null
         const datePickerOptions = {

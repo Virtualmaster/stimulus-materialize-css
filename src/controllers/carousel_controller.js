@@ -14,10 +14,10 @@ export default class extends Controller {
     }
 
     connect() {
-        const duration = this.hasDurationValue ? this.durationValue : undefined;
-        const dist = this.hasDistValue ? this.distValue : undefined;
-        const shift = this.hasShiftValue ? this.shiftValue : undefined;
-        const padding = this.hasPaddingValue ? this.paddingValue : undefined;
+        const duration = this.hasDurationValue ? this.durationValue : 200;
+        const dist = this.hasDistValue ? this.distValue : -100;
+        const shift = this.hasShiftValue ? this.shiftValue : 0;
+        const padding = this.hasPaddingValue ? this.paddingValue : 0;
         const numVisible = this.hasNumVisibleValue ? this.numVisibleValue : 1;
         const fullWidth = this.hasFullWidthValue ? this.fullWidthValue : true;
         const indicators = this.hasIndicatorsValue ? this.indicatorsValue : true;
@@ -37,15 +37,17 @@ export default class extends Controller {
             }
 
             if (image.complete) {
-                M.Carousel.init(this.element, carouselOptions)
+                this.instance = M.Carousel.init(this.element, carouselOptions);
             } else {
-                image.addEventListener('load', () => M.Carousel.init(this.element, carouselOptions))
+                image.addEventListener('load', () => {
+                    this.instance = M.Carousel.init(this.element, carouselOptions)
+                });
             }
         }
     }
 
     disconnect() {
-        const instance = M.Carousel.getInstance(this.element);
-        if (instance != null) instance.destroy();
+        if (this.instance != null)
+            this.instance.destroy();
     }
 }

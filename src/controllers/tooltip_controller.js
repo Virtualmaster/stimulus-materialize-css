@@ -14,16 +14,16 @@ export default class extends Controller {
     }
 
     connect() {
-        const exitDelay = this.hasExitDelayValue ? this.exitDelayValue : undefined;
-        const enterDelay = this.hasEnterDelayValue ? this.enterDelayValue : undefined;
-        const html = this.hasHtmlValue ? this.htmlValue : undefined;
-        const margin = this.hasMarginValue ? this.marginValue : undefined;
-        const inDuration = this.hasInDurationValue ? this.inDurationValue : undefined;
-        const outDuration = this.hasOutDurationValue ? this.outDurationValue : undefined;
-        const position = this.hasPositionValue ? this.positionValue : undefined;
-        const transitionMovement = this.hasTransitionMovementValue ? this.transitionMovementValue : undefined;
+        const exitDelay = this.hasExitDelayValue ? this.exitDelayValue : 0;
+        const enterDelay = this.hasEnterDelayValue ? this.enterDelayValue : 200;
+        const html = this.hasHtmlValue ? this.htmlValue : null;
+        const margin = this.hasMarginValue ? this.marginValue : 5;
+        const inDuration = this.hasInDurationValue ? this.inDurationValue : 300;
+        const outDuration = this.hasOutDurationValue ? this.outDurationValue : 250;
+        const position = this.hasPositionValue ? this.positionValue : 'bottom';
+        const transitionMovement = this.hasTransitionMovementValue ? this.transitionMovementValue : 10;
 
-        const tabsOptions = {
+        const tooltipOptions = {
             exitDelay: exitDelay,
             enterDelay: enterDelay,
             html: html,
@@ -33,7 +33,7 @@ export default class extends Controller {
             position: position,
             transitionMovement: transitionMovement
         }
-        this.instance = M.Tooltip.init(this.element, tabsOptions);
+        this.instance = M.Tooltip.init(this.element, tooltipOptions);
     }
 
     disconnect() {

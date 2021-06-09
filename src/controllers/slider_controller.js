@@ -10,10 +10,10 @@ export default class extends Controller {
     }
 
     connect(){
-        const indicators = this.hasIndicatorsValue ? this.indicatorsValue : undefined;
-        const height = this.hasHeightValue ? this.heightValue : undefined;
-        const duration = this.hasDurationValue ? this.durationValue : undefined;
-        const interval = this.hasIntervalValue ? this.intervalValue : undefined;
+        const indicators = this.hasIndicatorsValue ? this.indicatorsValue : true;
+        const height = this.hasHeightValue ? this.heightValue : 400;
+        const duration = this.hasDurationValue ? this.durationValue : 500;
+        const interval = this.hasIntervalValue ? this.intervalValue : 6000;
 
         const sliderOptions = {
             indicators: indicators,

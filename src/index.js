@@ -11,11 +11,11 @@ import ScrollspyController from './controllers/scrollspy_controller';
 import SidenavController from './controllers/sidenav_controller';
 import TabsController from './controllers/tabs_controller';
 import ToastController from './controllers/toast_controller';
+import TooltipController from './controllers/tooltip_controller';
 import AutocompleteController from './controllers/autocomplete_controller';
 import DatepickerController from './controllers/datepicker_controller';
 import TimepickerController from './controllers/timepicker_controller';
 import DateTimePickerController from './controllers/date_time_picker_controller';
-import FormSelectController from './controllers/form_select_controller';
 import FormController from './controllers/form_controller';
 
 export function registerAll(application) {
@@ -32,10 +32,10 @@ export function registerAll(application) {
     application.register('materialize--sidenav', SidenavController);
     application.register('materialize--tabs', TabsController);
     application.register('materialize--toast', ToastController);
+    application.register('materialize--tooltip', TooltipController);
     application.register('materialize--autocomplete', AutocompleteController);
     application.register('materialize--datepicker', DatepickerController);
     application.register('materialize--timepicker', TimepickerController);
     application.register('materialize--date-time-picker', DateTimePickerController);
-    application.register('materialize--form-select', FormSelectController);
     application.register('materialize--form', FormController);
 }

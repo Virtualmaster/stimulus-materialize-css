@@ -9,9 +9,9 @@ export default class extends Controller{
     }
 
     connect() {
-        const duration = this.hasDurationValue ? this.durationValue : undefined;
-        const swipeable = this.hasSwipeableValue ? this.swipeableValue : undefined;
-        const responsiveThreshold = this.hasResponsiveThresholdValue ? this.responsiveThresholdValue : undefined;
+        const duration = this.hasDurationValue ? this.durationValue : 300;
+        const swipeable = this.hasSwipeableValue ? this.swipeableValue : false;
+        const responsiveThreshold = this.hasResponsiveThresholdValue ? this.responsiveThresholdValue : Infinity;
 
         const tabsOptions = {
             duration: duration,

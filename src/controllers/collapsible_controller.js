@@ -9,9 +9,9 @@ export default class extends Controller {
     }
 
     connect() {
-        const accordion = this.hasAccordionValue ? this.accordionValue : undefined;
-        const inDuration = this.hasInDurationValue ? this.inDurationValue : undefined;
-        const outDuration = this.hasOutDurationValue ? this.outDurationValue : undefined;
+        const accordion = this.hasAccordionValue ? this.accordionValue : true;
+        const inDuration = this.hasInDurationValue ? this.inDurationValue : 300;
+        const outDuration = this.hasOutDurationValue ? this.outDurationValue : 300;
 
         const collapsibleOptions = {
             accordion: accordion,

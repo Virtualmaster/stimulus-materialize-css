@@ -1,22 +1,13 @@
 import {Controller} from 'stimulus'
+import {getOffsetTop} from "../utils";
 import M from 'materialize-css'
 
 export default class extends Controller {
-    static values = {
-        top: Number,
-        bottom: Number,
-        offset: Number
-    }
-
     connect() {
-        const top = this.hasTopValue ? this.topValue : undefined;
-        const bottom = this.hasBottomValue ? this.bottomValue : undefined;
-        const offset = this.hasOffsetValue ? this.offsetValue : undefined;
+        const top = getOffsetTop(this.element);
 
         const pushpinOptions = {
-            top: top,
-            bottom: bottom,
-            offset: offset
+            top: top
         }
         this.instance = M.Pushpin.init(this.element, pushpinOptions);
     }

@@ -13,13 +13,13 @@ export default class extends Controller {
     }
 
     connect() {
-        const duration = this.hasDurationValue ? this.durationValue : undefined;
-        const showClearBtn = this.hasShowClearBtnValue ? this.showClearBtnValue : undefined;
-        const defaultTime = this.hasDefaultTimeValue ? this.defaultTimeValue : undefined;
-        const fromNow = this.hasFromNowValue ? this.fromNowValue : undefined;
-        const autoClose = this.hasAutoCloseValue ? this.autoCloseValue : undefined;
-        const twelveHour = this.hasTwelveHourValue ? this.twelveHourValue : undefined;
-        const vibrate = this.hasVibrateValue ? this.vibrateValue : undefined;
+        const duration = this.hasDurationValue ? this.durationValue : 350;
+        const showClearBtn = this.hasShowClearBtnValue ? this.showClearBtnValue : false;
+        const defaultTime = this.hasDefaultTimeValue ? this.defaultTimeValue : 'now';
+        const fromNow = this.hasFromNowValue ? this.fromNowValue : 0;
+        const autoClose = this.hasAutoCloseValue ? this.autoCloseValue : false;
+        const twelveHour = this.hasTwelveHourValue ? this.twelveHourValue : false;
+        const vibrate = this.hasVibrateValue ? this.vibrateValue : true;
 
         const timePickerOptions = {
             duration: duration,
