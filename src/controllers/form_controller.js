@@ -2,9 +2,10 @@ import {Controller} from 'stimulus'
 import M from 'materialize-css'
 
 export default class extends Controller {
-    static targets = ['textArea', 'formSelect']
+    static targets = ['textArea', 'formSelect', 'chips']
     static values = {
-        selectOptions: Object
+        selectOptions: Object,
+        chipsOptions: Object
     }
 
     connect() {
@@ -14,6 +15,7 @@ export default class extends Controller {
                 this.characterCounters.push(M.CharacterCounter.init(textArea));
         })
         this.initSelects();
+        this.initChips();
     }
 
     refresh() {
@@ -23,6 +25,8 @@ export default class extends Controller {
         })
         this.destroySelects();
         this.initSelects();
+        this.initChips();
+        this.destroyChips();
     }
 
     disconnect() {
@@ -30,6 +34,7 @@ export default class extends Controller {
             instance.destroy();
         })
         this.destroySelects();
+        this.destroyChips();
     }
 
     initSelects(){
@@ -43,5 +48,18 @@ export default class extends Controller {
         this.formSelects.forEach(instance => {
             instance.destroy();
         })
+    }
+
+    initChips(){
+        this.chipsInstances = []
+        this.chipsTargets.forEach(chips => {
+            this.chipsInstances.push(M.Chips.init(chips, this.chipsOptionsValue));
+        })
+    }
+
+    destroyChips(){
+        this.chipsInstances.forEach(instance => {
+            instance.destroy();
+        });
     }
 }
