@@ -1,6 +1,6 @@
 {
   "name": "@virtualmaster/stimulus-materialize-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stimulus controllers for all materialize components",
   "main": "dist/stimulus-materialize-css.js",
   "module": "src/index.js",
@@ -15,6 +15,10 @@
   "dependencies": {
     "materialize-css": "1.0.0",
     "stimulus": "~2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Virtualmaster/stimulus-materialize-css.git"
   },
   "author": "Lukas Bauer <lukas.bauer@virtualmaster.com>",
   "license": "ISC",
