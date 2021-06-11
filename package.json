@@ -1,6 +1,6 @@
 {
   "name": "@virtualmaster/stimulus-materialize-css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Stimulus controllers for all materialize components",
   "main": "dist/stimulus-materialize-css.js",
   "module": "src/index.js",

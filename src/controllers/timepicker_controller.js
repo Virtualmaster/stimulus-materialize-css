@@ -29,7 +29,7 @@ export default class extends Controller {
             autoClose: autoClose,
             twelveHour: twelveHour,
             vibrate: vibrate,
-            container: document.body
+            container: 'body'
         }
 
         this.instance = M.Timepicker.init(this.element, timePickerOptions);
